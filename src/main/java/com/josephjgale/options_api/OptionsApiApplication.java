@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class OptionsApiApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(OptionsApiApplication.class, args);
     }
 
     @GetMapping("/hello")
-    public String sayHello(@RequestParam(value="myName",defaultValue = "World") String name){
+    public static String sayHello(@RequestParam(value="myName",defaultValue = "World") String name){
         return String.format("Hello %!",name);
-    };
+    }
 
 }
